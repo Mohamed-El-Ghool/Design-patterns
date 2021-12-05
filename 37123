@@ -1,0 +1,8 @@
+package Factories;
+
+import Staffs.Staff;
+
+public interface Staff_Factories {
+    
+    public Staff getStaff(String job);
+}

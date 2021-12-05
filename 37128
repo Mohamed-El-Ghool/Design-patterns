@@ -1,0 +1,21 @@
+package factory.method.assignment1;
+
+import Factories.Staff_Factories;
+import Factories.Staff_Factory;
+import Staffs.Staff;
+
+public class FactoryMethodAssignment1 {
+    public static void main(String[] args) {
+        Staff doctor=new Staff_Factory("Mohamed","IT",5000,2).getStaff("Doctor");
+        System.out.println("Staff name : "+doctor.getName());
+        System.out.println("Staff Departement : "+doctor.getDepartement());
+        System.out.println("Staff Salary : "+doctor.getSalary());
+        System.out.println("Staff Years Of Work : "+doctor.getYearsOfWork());
+        Staff teachingAssistant=new Staff_Factory("Mohamed","IS",3000,1).getStaff("Teaching Assistant");
+        System.out.println("Staff name : "+teachingAssistant.getName());
+        System.out.println("Staff Departement : "+teachingAssistant.getDepartement());
+        System.out.println("Staff Salary : "+teachingAssistant.getSalary());
+        System.out.println("Staff Years Of Work : "+teachingAssistant.getYearsOfWork());
+    }
+    
+}

@@ -1,0 +1,31 @@
+package Staffs;
+public class TeachingAssistant implements Staff{
+    private double salary;
+    private double yearsOfWork;
+    private String name;
+    private String departement;
+    public TeachingAssistant(String name,String departement,double salary,double yearsOfWork){
+        this.name=name;
+        this.salary=salary;
+        this.yearsOfWork=yearsOfWork;
+        this.departement=departement;
+    }
+    @Override
+    public double getSalary() {
+        return salary;
+    }
+
+    @Override
+    public double getYearsOfWork() {
+       return yearsOfWork;
+    }
+    public String getName(){
+        return name;
+    }
+
+    @Override
+    public String getDepartement() {
+        return departement;
+    }
+    
+}

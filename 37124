@@ -1,0 +1,27 @@
+package Factories;
+
+import Staffs.Doctor;
+import Staffs.Staff;
+import Staffs.TeachingAssistant;
+
+public class Staff_Factory implements Staff_Factories{
+    private double salary;
+    private double yearsOfWork;
+    private String name;
+    private String departement;
+    public Staff_Factory(String name,String departement,double salary,double yearsOfWork){
+        this.name=name;
+        this.salary=salary;
+        this.yearsOfWork=yearsOfWork;
+        this.departement=departement;
+    }
+    public Staff getStaff(String job) {
+        if(job=="Doctor")
+            return new Doctor(name,departement,salary,yearsOfWork);
+        else if(job=="Teaching Assistant")
+            return new TeachingAssistant(name, departement, salary, yearsOfWork);
+        else
+            return null;
+    }
+    
+}

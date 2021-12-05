@@ -1,0 +1,7 @@
+package Staffs;
+public interface Staff {
+    public String getName();
+    public String getDepartement();
+    public double getSalary();
+    public double getYearsOfWork();
+}
